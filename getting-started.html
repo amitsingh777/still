@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="build/styles.css" />
   </head>
 
-  <body
-    class="bg-greenbackground font-body transition-color ease-in duration-1000"
-    data-replace="{ 'bg-greenbackground': 'bg-bluebackground' }"
-  >
+  <body class="bg-white font-body transition-color ease-in duration-1000">
     <main class="flex flex-col justify-between h-screen">
-      <div class="z-20 absolute">
+      <!-- <div class="z-20 absolute">
         <div class="m-10 py-44 items-center opacity-0 animate-calm">
           <img src="/static/images/logo.png" alt="" />
         </div>
@@ -29,55 +26,38 @@
         >
           <p>2/7</p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="z-20 animate-video">
-        <div>
-          <div
-            class="container mx-auto px-4 py-4 flex justify-end items-baseline"
-          >
-            <div class="text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="w-6 h-6"
+      <!-- <div class="z-20 animate-video"> -->
+      <div class="z-20">
+        <div
+          class="flex flex-col items-center justify-center pt-[50px] md-[60px]"
+        >
+          <div>
+            <div>
+              <p
+                class="text-[1rem] leading-[1.187rem] text-darkGrey mb-[10] font-normal"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+                Welcom Simran!
+              </p>
+              <h1
+                class="leading-[2.625rem] text-[35px] font-light font-body mb-[5px]"
+              >
+                Today's focus
+              </h1>
+              <h2 class="leading-[25px] text-[21px] font-body">
+                5 Principles of Breath work
+              </h2>
             </div>
-          </div>
-        </div>
 
-        <div class="z-20 flex flex-col gap-10 items-center justify-center">
-          <div class="flex flex-col items-center justify-center px-10">
-            <p class="text-white font-medium text-4xl">
-              Get ready for your today
-            </p>
-            <p class="text-white text-lg">
-              You'll have to watch the prep video before your click on read for
-              practice
-            </p>
-          </div>
-
-          <div class="py-10">
-            <div class="grid gap-8 items-start justify-center">
-              <div class="relative group">
-                <div
-                  class="absolute -inset-0.5 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"
-                ></div>
-                <div class="m-8 relative space-y-4">
+            <div>
+              <div class="relative py-[40px] md:py-[60px]">
+                <div class="relative space-y-4">
                   <div
                     class="z-10 flex flex-col gap-14 items-center justify-center"
                   >
                     <iframe
-                      src="https://www.youtube.com/embed/UBOj6rqRUME"
+                      src="https://www.youtube.com/embed/2yidRM_wBf4"
                       class="h-64 w-80 md:h-80 md:w-96 rounded-2xl"
                       frameborder="0"
                       allowfullscreen
@@ -87,10 +67,10 @@
               </div>
               <div class="flex items-center justify-center">
                 <a
-                  class="px-10 py-2 bg-accent font-bold text-lg text-primary border border-border rounded-3xl"
+                  class="px-10 py-2 bg-bluebackground font-bold text-lg text-accent border border-accent rounded-[20px]"
                   href=""
                 >
-                  I'm ready for the practice</a
+                  I'm ready for Day 1!</a
                 >
               </div>
             </div>
@@ -98,17 +78,26 @@
         </div>
       </div>
 
-      <div class="absolute bottom-0">
+      <div class="absolute bottom-0 left-0 right-0">
         <footer class="z-10">
           <img src="static/images/streak.png" alt="" />
-
-          <div class="flex flex-col m-4 animate-video">
-            <div class="flex items-center justify-center text-center">
-              <img class="h-14 w-32" src="static/images/logo.png" alt="" />
-            </div>
+          <div class="flex flex-col justify-center items-center m-4">
+            <p
+              class="flex items-center gap-x-4 leading-[29px] text-[24px] font-normal text-darkSecondaryGrey mb-[8px] md:mb-[16px]"
+            >
+              Get in touch
+              <img
+                class="h-[19px] w-[19px]"
+                src="static/images/whatsapp.webp"
+              />
+            </p>
+            <!-- <div class="flex items-center justify-center text-center"> -->
+            <img class="h-14 w-32" src="static/images/logo-gray.png" alt="" />
+            <!-- </div> -->
           </div>
         </footer>
       </div>
+      <!-- <div class="absolute bottom-0">rere</div> -->
     </main>
   </body>
 
