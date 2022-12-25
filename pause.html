@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still - Home</title>
+    <link rel="stylesheet" href="build/styles.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/amplitudejs@{{version-number}}/dist/amplitude.js"></script>
+
+</head>
+
+<body class="font-body">
+
+    <header>
+        <div class="container mx-auto px-8 py-10 text-gray-500 flex justify-between  items-center">
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="z-20 container mx-auto">
+
+        <div class="flex place-items-end gap-4 justify-center">
+            <img src="static/images/logo-gray.png" alt="">
+            <div class="text-[#979797] font-medium text-3xl">
+                <p>for 2/7</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+            <button class="z-20 h-80 w-80">
+                <img src="static/images/stop-icon.svg" alt="">
+            </button>
+        </div>
+
+
+        <div class="relative z-20 mt-32 w-full flex flex-col px-6 pb-6">
+            <input type="range" id="song-percentage-played" class="amplitude-song-slider" step=".1" />
+            <div class="flex w-full justify-between">
+                <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-primary"></span>
+                <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-secondary"></span>
+                <div class="mr-2 mt-2">
+                    <img src="/static/images/rewind.svg" alt="">
+                </div>
+                <div class="w-full flex justify-between mt-2">
+                    <p class="text-base text-secondary">0:00</p>
+                    <p class="text-base text-secondary">0:00</p>
+                </div>
+            </div>
+        </div>
+
+        <audio id="single-song" amplitude-artist="Jake Jendusa" amplitude-title="Porch Stomp Blues"
+            amplitude-album="In Search Of EP" amplitude-album-art-url="album-art/jendusaep.jpg"
+            amplitude-audio-type="song">
+            <source src="songs/03%20Porch%20Stomp%20Blues.mp3" type="audio/mp3" />
+        </audio>
+
+    </main>
+
+    <div class="absolute bottom-0">
+        <footer class="z-0">
+            <img src="static/images/streak.png" alt="">
+        </footer>
+    </div>
+
+
+</body>
+
+<script>
+
+    Amplitude.init({
+        "bindings": {
+            37: 'prev',
+            39: 'next',
+            32: 'play_pause'
+        },
+        "callbacks": {
+            timeupdate: function () {
+                let percentage = Amplitude.getSongPlayedPercentage();
+
+                if (isNaN(percentage)) {
+                    percentage = 0;
+                }
+
+                /**
+                 * Massive Help from: https://nikitahl.com/style-range-input-css
+                 */
+                let slider = document.getElementById('song-percentage-played');
+                slider.style.backgroundSize = percentage + '% 100%';
+            }
+        },
+        "songs": [
+            {
+                "name": "First Snow",
+                "artist": "Emancipator",
+                "album": "Soon It Will Be Cold Enough",
+                "url": "https://521dimensions.com/song/FirstSnow-Emancipator.mp3",
+                "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/soon-it-will-be-cold-enough.jpg"
+            },
+            {
+                "name": "Intro / Sweet Glory",
+                "artist": "Jimkata",
+                "album": "Die Digital",
+                "url": "https://521dimensions.com/song/IntroSweetGlory-Jimkata.mp3",
+                "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/die-digital.jpg"
+            },
+            {
+                "name": "Offcut #6",
+                "artist": "Little People",
+                "album": "We Are But Hunks of Wood Remixes",
+                "url": "https://521dimensions.com/song/Offcut6-LittlePeople.mp3",
+                "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-but-hunks-of-wood.jpg"
+            },
+            {
+                "name": "Dusk To Dawn",
+                "artist": "Emancipator",
+                "album": "Dusk To Dawn",
+                "url": "https://521dimensions.com/song/DuskToDawn-Emancipator.mp3",
+                "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/from-dusk-to-dawn.jpg"
+            },
+            {
+                "name": "Anthem",
+                "artist": "Emancipator",
+                "album": "Soon It Will Be Cold Enough",
+                "url": "https://521dimensions.com/song/Anthem-Emancipator.mp3",
+                "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/soon-it-will-be-cold-enough.jpg"
+            }
+        ]
+    });
+
+    window.onkeydown = function (e) {
+        return !(e.keyCode == 32);
+    };
+</script>
+
+</html>

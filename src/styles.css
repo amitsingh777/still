@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+
+    .animation-delay-4000 {
+        animation-delay: 4s;
+
+    }
+}
+
+@layer components {
+
+
+    .amplitude-current-time {
+        color: aqua;
+    }
+
+    .amplitude-song-slider {
+        color: aqua;
+        background-color: yellow;
+
+    }
+
+
+
+}
