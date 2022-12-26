@@ -792,7 +792,7 @@ video {
 }
 
 .animate-bgColor{
-  animation: animateBgColor 10s linear;
+  animation: animateBgColor 15s linear;
 }
 
 @keyframes calm{
@@ -831,6 +831,20 @@ video {
 
 .animate-calm{
   animation: calm 10s linear;
+}
+
+@keyframes welcomeBack{
+  50%{
+    opacity: 1;
+  }
+
+  80%{
+    opacity: 0;
+  }
+}
+
+.animate-welcomeBack{
+  animation: welcomeBack 10s linear;
 }
 
 @keyframes welcome{
@@ -877,6 +891,38 @@ video {
 
 .animate-welcome{
   animation: welcome 13s linear;
+}
+
+@keyframes justAfterWelcomeBackFirst{
+  50%{
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+  }
+}
+
+.animate-justAfterWelcomeBackFirst{
+  animation: justAfterWelcomeBackFirst 10s cubic-bezier(0,1.25,1,.92);
+}
+
+@keyframes justAfterWelcomeBackSecond{
+  0%{
+    opacity: 1;
+  }
+
+  75%{
+    opacity: 0;
+  }
+}
+
+.animate-justAfterWelcomeBackSecond{
+  animation: justAfterWelcomeBackSecond 10s cubic-bezier(.19,.85,.9,1.2);
 }
 
 @keyframes video{
@@ -1084,11 +1130,6 @@ video {
   padding-right: 4rem;
 }
 
-.py-44{
-  padding-top: 11rem;
-  padding-bottom: 11rem;
-}
-
 .py-\[40px\]{
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1097,6 +1138,11 @@ video {
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.py-44{
+  padding-top: 11rem;
+  padding-bottom: 11rem;
 }
 
 .px-6{

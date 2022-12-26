@@ -30,7 +30,13 @@ module.exports = {
         welcome: "welcome 13s linear",
         video: "video 15s linear",
         tilt: "tilt 10s infinite linear",
-        bgColor: "animateBgColor 10s linear",
+        bgColor: "animateBgColor 15s linear",
+        welcomeBack: "welcomeBack 10s linear",
+        justAfterWelcomeBackFirst:
+          "justAfterWelcomeBackFirst 10s cubic-bezier(0,1.25,1,.92)",
+        justAfterWelcomeBackSecond:
+          // "justAfterWelcomeBackSecond 10s cubic-bezier(0,1.25,.11,.73)",
+          "justAfterWelcomeBackSecond 10s cubic-bezier(.19,.85,.9,1.2)",
       },
       keyframes: {
         calm: {
@@ -44,6 +50,34 @@ module.exports = {
           "95%": { opacity: "0.8" },
           "100%": { opacity: "0.3" },
         },
+        welcomeBack: {
+          "50%": {
+            opacity: 1,
+          },
+          "80%": {
+            opacity: 0,
+          },
+        },
+        justAfterWelcomeBackFirst: {
+          "50%": {
+            opacity: 1,
+          },
+          "95%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0,
+          },
+        },
+        justAfterWelcomeBackSecond: {
+          "0%": {
+            opacity: 1,
+          },
+          "75%": {
+            opacity: 0,
+          },
+        },
+
         welcome: {
           "0%": { opacity: "0" },
           "10%": { opacity: "0" },

@@ -14,13 +14,15 @@
     data-replace="{ 'bg-greenbackground': 'bg-white' }"
   > -->
     <main class="flex flex-col justify-between h-screen">
-      <div class="z-20 absolute">
-        <div class="m-10 py-44 items-center opacity-0 animate-calm">
+      <div
+        class="z-20 absolute flex items-center justify-center flex-col bottom-0 h-screen"
+      >
+        <div class="m-10 items-center opacity-0 animate-calm">
           <img src="/static/images/logo.png" alt="" />
         </div>
 
         <div
-          class="flex items-center justify-center text-white text-xl opacity-0 animate-welcome"
+          class="flex items-center justify-center text-white text-xl opacity-0 animate-welcomeBack"
         >
           <p>Welcome back, Aastha.</p>
         </div>
@@ -28,7 +30,10 @@
         <div
           class="flex items-center justify-center text-white font-black text-9xl opacity-0 animate-welcome"
         >
-          <p>2/7</p>
+          <p>
+            <span class="animate-justAfterWelcomeBackFirst">2</span>/
+            <span class="animate-justAfterWelcomeBackSecond">7</span>
+          </p>
         </div>
       </div>
 
@@ -81,7 +86,7 @@
         </div>
       </div>
 
-      <div class="absolute bottom-0 left-0 right-0">
+      <div class="absolute bottom-0 left-0 right-0 animate-video">
         <footer class="z-10">
           <img src="static/images/streak.png" alt="" />
           <div class="flex flex-col justify-center items-center m-4">
