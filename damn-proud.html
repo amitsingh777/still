@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Still - Home</title>
+    <link rel="stylesheet" href="build/styles.css" />
+  </head>
+
+  <body
+    class="bg-greenbackground font-body transition-color ease-in duration-1000"
+    data-replace="{ 'bg-greenbackground': 'bg-bluebackground' }"
+  >
+    <header>
+      <div
+        class="container mx-auto px-8 py-10 text-gray-500 flex justify-between items-center"
+      >
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main class="flex flex-col justify-between h-screen items-center px-8">
+      <!-- <div class="z-20 relative flex items-center justify-center h-screen m-10">
+            <p class="text-white font-medium text-4xl text-center">Your official Day 1
+                starts tomorrow.</p>
+        </div> -->
+      <div class="z-10 mt-[60px] text-center">
+        <p class="text-[64px] text-accent text-center leading-[77px] font-bold">
+          Damn
+        </p>
+        <p
+          class="text-[36px] leading-[43px] font-medium text-accent mb-[113px]"
+        >
+          We’re proud of you.
+        </p>
+
+        <p
+          class="text-accent leading-[32px] text-center text-[27px] font-medium mb-[72px]"
+        >
+          Congratulations on completing the 5 day streak!
+        </p>
+        <div class="flex items-center justify-center">
+          <a
+            class="px-10 py-2 bg-accent font-bold text-lg text-primary border border-border rounded-[20px]"
+            href=""
+          >
+            What’s next?</a
+          >
+        </div>
+      </div>
+
+      <div class="absolute bottom-0">
+        <footer class="z-0">
+          <img src="static/images/streak.png" alt="" />
+
+          <div class="flex flex-col justify-center items-center m-4">
+            <p
+              class="flex items-center gap-x-4 leading-[29px] text-[24px] font-normal text-white mb-[8px] md:mb-[16px]"
+            >
+              Get in touch
+              <img
+                class="h-[19px] w-[19px]"
+                src="static/images/whatsapp_white.webp"
+              />
+            </p>
+            <!-- <div class="flex items-center justify-center text-center"> -->
+            <img class="h-14 w-32" src="static/images/logo.png" alt="" />
+            <!-- </div> -->
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var replacers = document.querySelectorAll("[data-replace]");
+      for (var i = 0; i < replacers.length; i++) {
+        let replaceClasses = JSON.parse(
+          replacers[i].dataset.replace.replace(/'/g, '"')
+        );
+        Object.keys(replaceClasses).forEach(function (key) {
+          replacers[i].classList.remove(key);
+          replacers[i].classList.add(replaceClasses[key]);
+        });
+      }
+    });
+  </script>
+</html>
