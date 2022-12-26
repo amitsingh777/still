@@ -665,6 +665,30 @@ video {
   margin-top: 2rem;
 }
 
+.mr-\[8px\]{
+  margin-right: 8px;
+}
+
+.ml-\[22px\]{
+  margin-left: 22px;
+}
+
+.mt-\[198px\]{
+  margin-top: 198px;
+}
+
+.mt-\[160px\]{
+  margin-top: 160px;
+}
+
+.mt-\[130px\]{
+  margin-top: 130px;
+}
+
+.mt-\[90px\]{
+  margin-top: 90px;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -705,6 +729,10 @@ video {
   height: 3.5rem;
 }
 
+.h-\[14px\]{
+  height: 14px;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -737,8 +765,16 @@ video {
   width: 8rem;
 }
 
+.w-\[14px\]{
+  width: 14px;
+}
+
 .max-w-xl{
   max-width: 36rem;
+}
+
+.grow{
+  flex-grow: 1;
 }
 
 @keyframes tilt{
@@ -951,6 +987,10 @@ video {
   animation: video 15s linear;
 }
 
+.flex-row{
+  flex-direction: row;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1157,6 +1197,11 @@ video {
 .py-20{
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.py-\[30px\]{
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .pt-\[50px\]{
